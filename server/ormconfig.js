@@ -1,5 +1,5 @@
 const PostgressConnectionStringParser = require("pg-connection-string")
-
+const typeorm = require("typeorm")
 const databaseUrl = process.env.DATABASE_URL
 
 const connectionOptions = PostgressConnectionStringParser.parse(databaseUrl)
@@ -25,7 +25,7 @@ if (process.env.APP_ENV === "production") {
     },
   }
 
-  connection = createConnection(typeOrmOptions)
+  connection = typeorm.createConnection(typeOrmOptions)
 } else {
   connection = {
     type: "postgres",
