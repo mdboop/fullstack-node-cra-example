@@ -16,8 +16,10 @@ const baseConnection = {
 let connection
 
 if (process.env.NODE_ENV === "production") {
-  const databaseUrl = process.env.DATABASE_URL
-  const pgConnectionOptions = PGConnectionStringParser.parse(databaseUrl)
+  const connectionString = process.env.DATABASE_URL
+  console.log(connectionString)
+  const pgConnectionOptions = PGConnectionStringParser.parse(connectionString)
+  console.log(pgConnectionOptions)
   const productionConnection = {
     ...baseConnection,
     name: pgConnectionOptions.name,
