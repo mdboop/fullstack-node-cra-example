@@ -4,11 +4,11 @@
   "description": "Awesome project developed with TypeORM.",
   "devDependencies": {
     "@types/node": "^8.0.29",
-    "pgtools": "^0.3.0",
-    "typescript": "3.3.3333"
+    "pgtools": "^0.3.0"
   },
   "dependencies": {
     "@types/express": "^4.17.8",
+    "typescript": "3.3.3333",
     "dotenv": "^8.2.0",
     "ts-node": "3.3.0",
     "express": "^4.17.1",
