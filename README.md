@@ -88,3 +88,18 @@ DB_PORT=5432
 #### Run migrations
 
 `npm run migrations:run`
+
+## Deployment
+
+This example is also meant to guide you through a deployment to Heroku.
+
+### Prerequisites
+
+1. Heroku account
+2. Heroku CLI installed
+
+### Heroku app setup
+
+1. Create a new app and name it
+2. Go to `Settings > Buildpacks` and click "Add buildpack" and select `Node`
+3. Go to `Resources > Add-ons` and type in "postgres", select, and choose the free plan
