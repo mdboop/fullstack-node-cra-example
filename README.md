@@ -44,12 +44,47 @@ fullstack-node-cra-example
 
 ## Development
 
+### Pre-requisites
+
+1. Node (>=12.x.x)
+2. PostgreSQL
+
 ### Install dependencies
 
 1. `cd client && npm install`
 2. `cd server && npm install`
 
+### Add environment variables
+
+1. At the root of the project, `touch .env`
+2. Add the following values:
+
+```
+DB_NAME=<your db name here>
+DB_USER=<existing pg role here>
+DB_HOST=localhost
+DB_PASSWORD=<any password here>
+DB_PORT=5432
+```
+
+### Run migrations
+
+1. Make sure your postgres server is up and running (e.g. `brew services start postgresql`)
+2. `npm run migration:run`
+
+**note:** I'd like to improve this, but for now, you need to enter a postgres role that exists already. If you
+
 ### Run client and server in development mode
 
 1. in one terminal: `cd client && npm start`
 2. in another: `cd server && npm dev`
+
+### Migrations
+
+#### Generate migrations
+
+`npm run migrations:gen -- -n <MIGRATION NAME>`
+
+#### Run migrations
+
+`npm run migrations:run`
