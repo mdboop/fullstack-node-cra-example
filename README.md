@@ -60,11 +60,11 @@ fullstack-node-cra-example
 2. Add the following values:
 
 ```
-DB_NAME=<your db name here>
-DB_USER=<existing pg role here>
-DB_HOST=localhost
-DB_PASSWORD=<any password here>
-DB_PORT=5432
+PGDATABASE=<NAME>
+PGUSER=<USER>
+PGHOST=localhost
+PGPASSWORD=<SOME PASSWORD>
+PGPORT=5432
 ```
 
 ### Run migrations

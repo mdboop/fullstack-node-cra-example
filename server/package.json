@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "ts-node src/index.ts",
+    "heroku-postbuild": "npm run migration:run && cd ../client && npm run build",
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
     "migration:gen": "ts-node ./node_modules/typeorm/cli.js migration:generate",
     "db:create": "node scripts/createDb.js",

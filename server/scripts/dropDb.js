@@ -2,10 +2,10 @@ const pgtools = require("pgtools")
 require("dotenv").config()
 
 const config = {
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
 }
 
 const readline = require("readline").createInterface({
@@ -20,7 +20,7 @@ readline.question(
   (db) => {
     console.log("\x1b[33m", `Dropping DB ${db}.`)
     readline.close()
-    pgtools.dropdb(config, process.env.DB_NAME, function (err, res) {
+    pgtools.dropdb(config, process.env.PGDATABASE, function (err, res) {
       if (err) {
         console.error(err)
         process.exit(1)
