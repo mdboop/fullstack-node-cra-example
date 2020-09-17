@@ -104,7 +104,8 @@ This example is also meant to guide you through a deployment to Heroku.
 2. `heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack`
 3. `heroku buildpacks:add heroku/nodejs`
 4. `heroku config:set PROJECT_PATH=server`
-5. Go to `Resources > Add-ons` and type in "postgres", select, and choose the free plan
+5. `heroku config:set APP_ENV=production`
+6. Go to `Resources > Add-ons` and type in "postgres", select, and choose the free plan
 
 ### Deploy the app!
 
