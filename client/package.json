@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "rm -rf ../server/src/build && cp -r build ../server/src/build",
+    "postbuild": "rm -rf ../server/src/dist && cp -r build ../server/src/dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
