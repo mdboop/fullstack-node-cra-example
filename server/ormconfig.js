@@ -6,7 +6,9 @@ module.exports = {
   password: process.env.PGPASSWORD,
   database: process.env.PGDATABASE,
   synchronize: true,
-  rejectUnauthorized: false,
+  extra: {
+    ssl: true,
+  },
   logging: false,
   entities: ["src/entity/**/*.ts"],
   migrations: ["src/migration/**/*.ts"],
