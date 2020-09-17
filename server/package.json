@@ -18,6 +18,8 @@
   },
   "scripts": {
     "start": "ts-node src/index.ts",
+    "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "migration:gen": "ts-node ./node_modules/typeorm/cli.js migration:generate",
     "db:create": "node scripts/createDb.js",
     "db:drop": "node scripts/dropDb.js"
   }
